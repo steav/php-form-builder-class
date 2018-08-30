@@ -2,7 +2,7 @@
 namespace PFBC\Validation;
 
 class Captcha extends \PFBC\Validation {
-	protected $message = "Error: The reCATPCHA response provided was incorrect.  Please re-try.";
+	protected $message = "Die reCATPCHA Eingabe ist falsch.";
 	protected $privateKey;
 
 	public function __construct($privateKey, $message = "") {

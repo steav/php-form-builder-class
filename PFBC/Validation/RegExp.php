@@ -2,7 +2,7 @@
 namespace PFBC\Validation;
 
 class RegExp extends \PFBC\Validation {
-	protected $message = "Error: %element% contains invalid characters.";
+	protected $message = "%element% enth&auml;lt ung&uuml;ltige Zeichen.";
 	protected $pattern;
 
 	public function __construct($pattern, $message = "") {

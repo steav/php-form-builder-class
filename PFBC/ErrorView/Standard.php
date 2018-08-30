@@ -11,7 +11,7 @@ class Standard extends \PFBC\ErrorView {
 		else
 			var errorFormat = errorSize + " errors were";
 
-		var errorHTML = '<div class="alert alert-error"><a class="close" data-dismiss="alert" href="#">×</a><strong class="alert-heading">The following ' + errorFormat + ' found:</strong><ul>';
+		var errorHTML = '<div class="alert alert-error"><a class="close" data-dismiss="alert" href="#">×</a><strong class="alert-heading">' + errorFormat + '</strong><ul>';
 		for(e = 0; e < errorSize; ++e)
 			errorHTML += '<li>' + response.errors[e] + '</li>';
 		errorHTML += '</ul></div>';
@@ -38,14 +38,14 @@ JS;
 			$errors = implode("</li><li>", $errors);
 
             if($size == 1)
-                $format = "error was";
+                $format = "Bitte &uuml;berpr&uuml;fe deine Eingaben nochmals:";
             else
-                $format = $size . " errors were";
+                $format = "Bitte &uuml;berpr&uuml;fe deine Eingaben nochmals:";
 
 			echo <<<HTML
 			<div class="alert alert-error">
 				<a class="close" data-dismiss="alert" href="#">×</a>
-				<strong class="alert-heading">The following $format found:</strong>
+				<strong class="alert-heading">$format</strong>
 				<ul><li>$errors</li></ul>
 			</div>
 HTML;
